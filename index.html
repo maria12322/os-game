@@ -1,6 +1,4 @@
-
-
-      <!DOCTYPE html>
+  <!DOCTYPE html>
   
       <head>
           <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -126,31 +124,31 @@
                   
                   // Массив имён файлов .patt. Массив заполняется в порядке добавления маркеров
                   // если вместо .patt был добавлен баркод, на его место в массив добавляется пустая строка
-                  const patternNames = ["" ,"" ,"" ,""];
+                  const patternNames = ["" ,""];
                   // Maссив баркодов, заполняется одновременно с массивом паттернов
                   // если вместо баркода был добавлен .patt, на его место в массив добавляется -1
-                  const patternBarcode = [1 ,2 ,3 ,4];
+                  const patternBarcode = [5 ,8];
                   // Массив типов контента для каждого маркера, заполняется значиями: изображение, модель, видео
-                  const modes = ["" ,"" ,"" ,""];
+                  const modes = ["" ,""];
                   // Массив файлов моделей, если нет модели будет добавлена пустая строка
-                  const modelFiles = ["" ,"" ,"" ,""];
+                  const modelFiles = ["" ,""];
                   // Массив файлов изображений, если нет изображения будет добавлена пустая строка
-                  const imageFiles = ["" ,"" ,"" ,""];
+                  const imageFiles = ["" ,""];
                   // Массив файлов видео, если нет видео будет добавлена пустая строка
-                  const videoFiles = ["" ,"" ,"" ,""];
+                  const videoFiles = ["" ,""];
                   // Массив файлов аудио, если нет аудио будет добавлена пустая строка
-                  const audioFiles = ["Third Hand.mp3" ,"B.co..mp3" ,"y2mate.com - Tuturu  Sound Effect HD_320kbps.mp3" ,"GH dice.mp3"];
+                  const audioFiles = ["GH dice.mp3" ,"B.co..mp3"];
                   // Массив опций повтора аудио и видео контента, по дефолту для всех будет false
-                  const repeatOptions = ["true" ,"true" ,"true" ,"true"];
+                  const repeatOptions = ["true" ,"true"];
   
                   // Создаём массив для всех маркеров
                   const markerRoots = [];
-                  for (let i = 0; i < 4; i++) {
+                  for (let i = 0; i < 2; i++) {
                         markerRoots[i] = new THREE.Group();
                   }
   
                   // Проходимся по каждому маркеру из массива и добавляем его в главный контейнер 
-                  for (let i = 0; i < 4; i++) {
+                  for (let i = 0; i < 2; i++) {
                     mainContainer.add(markerRoots[i]);
 
                     // Если текущий маркер это баркод, создаём AR контроллер под баркод
